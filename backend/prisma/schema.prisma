@@ -1,0 +1,64 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  googleId  String?   @unique
+  email     String   @unique
+  password  String?
+  ratings   Rating[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model CoffeeShop {
+  id         String    @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  address    String
+  locationId String    @unique
+  location   Location  @relation(fields: [locationId], references: [id])
+  products   Product[]
+  ratings    Rating[]
+  imageUrl   String?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}
+
+model Product {
+  id           String     @id @default(auto()) @map("_id") @db.ObjectId
+  name         String
+  price        Float
+  category     String
+  coffeeShopId String
+  description  String?
+  coffeeShop   CoffeeShop @relation(fields: [coffeeShopId], references: [id])
+  imageUrl     String?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @default(now())
+}
+
+model Rating {
+  id           String     @id @default(auto()) @map("_id") @db.ObjectId
+  rating       Int
+  comment      String?
+  userId       String
+  user         User       @relation(fields: [userId], references: [id])
+  coffeeShopId String
+  coffeeShop   CoffeeShop @relation(fields: [coffeeShopId], references: [id])
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @default(now())
+}
+
+model Location {
+  id         String      @id @default(auto()) @map("_id") @db.ObjectId
+  lat        Float
+  lng        Float
+  coffeeShop CoffeeShop?
+}
