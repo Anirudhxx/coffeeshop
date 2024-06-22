@@ -1,0 +1,28 @@
+.home-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #555;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.coffee-shops-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
