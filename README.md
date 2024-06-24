@@ -51,14 +51,16 @@ Coffee Shop Finder is a web application designed to help users locate nearby cof
 2. **Set up environment variables**
 
    Create a separate `.env` file in the frontend and backend folders of your project and add the following environment variables:
-   For Frontend:
+
+   **Frontend** `.env`:
    ```env
    PORT=your-port-number
    GOOGLE_CLIENT_ID=your-google-client-id
    REACT_APP_API_URL=your-server-url
    GEOKEO_API_KEY=your-geokeo-api-key
    ```
-   For backend:
+   
+   **Backend** `.env`:
    ```env
    PORT=your-port-number
    MONGO_URI=your-mongodb-atlas-uri
@@ -67,31 +69,34 @@ Coffee Shop Finder is a web application designed to help users locate nearby cof
    GEOKEO_API_KEY=your-geokeo-api-key
    ```
 
-4. **Install dependencies**
-   For frontend, you can use:
+3. **Install dependencies**
+   
+   Navigate to the frontend and backend directories and install dependencies:
+   
+   For frontend:
    ```sh
    cd frontend
+   npm install
    ```
-   For backend, you can use:
+   
+   For backend:
    ```sh
    cd backend
-   ```
-   Then install all dependencies:
-   ```sh
    npm install
    ```
 
-5. **Run the application locally**
-   For Frontend:
+4. **Run the application locally**
+
+   For frontend:
    ```sh
    npm start
    ```
-   For Backend:
+   
+   For backend:
    ```sh
    npx prisma generate
    npm start
    ```
-
 
 ## Directory Structure
 
@@ -134,7 +139,6 @@ coffee-shop-finder/
 
 Once the application is deployed, users can:
 - Sign in using Google OAuth.
-- You can use the search bar to enter your location and all the nearby coffee shops will be curated on hitting search button.
+- Use the search bar to enter their location and find nearby coffee shops.
 - Add products to their cart and manage them.
 - Enjoy a beautifully designed, responsive UI.
-
