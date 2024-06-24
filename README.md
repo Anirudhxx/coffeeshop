@@ -54,13 +54,14 @@ Coffee Shop Finder is a web application designed to help users locate nearby cof
    Create a separate `.env` file in the frontend and backend folders of your project and add the following environment variables:
    For Frontend:
    ```env
-   PORT=3000
+   PORT=your-port-number
    GOOGLE_CLIENT_ID=your-google-client-id
-   GOOGLE_CLIENT_SECRET=your-google-client-secret
+   REACT_APP_API_URL=your-server-url
    GEOKEO_API_KEY=your-geokeo-api-key
    ```
    For backend:
    ```env
+   PORT=your-port-number
    MONGO_URI=your-mongodb-atlas-uri
    GOOGLE_CLIENT_ID=your-google-client-id
    GOOGLE_CLIENT_SECRET=your-google-client-secret
