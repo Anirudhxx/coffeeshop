@@ -35,7 +35,6 @@ Coffee Shop Finder is a web application designed to help users locate nearby cof
 ### Prerequisites
 
 - Docker installed on your machine
-- AWS CLI configured with appropriate permissions
 - MongoDB Atlas account and cluster
 - Google OAuth credentials
 - GeoKeo API key
