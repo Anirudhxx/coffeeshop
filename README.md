@@ -51,25 +51,26 @@ Coffee Shop Finder is a web application designed to help users locate nearby cof
 
 2. **Set up environment variables**
 
-   Create a `.env` file in the root of your project and add the following environment variables:
-
+   Create a separate `.env` file in the frontend and backend folders of your project and add the following environment variables:
+   For Frontend:
    ```env
    PORT=3000
-   MONGO_URI=your-mongodb-atlas-uri
    GOOGLE_CLIENT_ID=your-google-client-id
    GOOGLE_CLIENT_SECRET=your-google-client-secret
    GEOKEO_API_KEY=your-geokeo-api-key
-   MONGO_DATABASE_URL=your-mongo-atlas-connection-string
    ```
+   For backend:
+   ```env
+   MONGO_URI=your-mongodb-atlas-uri
 
-3. **Install dependencies**
+4. **Install dependencies**
    For frontend, you can use:
    ```sh
    cd frontend
    ```
    For backend, you can use:
    ```sh
-   cd frontend
+   cd backend
    ```
    Then install all dependencies:
    ```sh
@@ -77,8 +78,13 @@ Coffee Shop Finder is a web application designed to help users locate nearby cof
    ```
 
 5. **Run the application locally**
-
+   For Frontend:
    ```sh
+   npm start
+   ```
+   For Backend:
+   ```sh
+   npx prisma generate
    npm start
    ```
 
