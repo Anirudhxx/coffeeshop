@@ -62,6 +62,10 @@ Coffee Shop Finder is a web application designed to help users locate nearby cof
    For backend:
    ```env
    MONGO_URI=your-mongodb-atlas-uri
+   GOOGLE_CLIENT_ID=your-google-client-id
+   GOOGLE_CLIENT_SECRET=your-google-client-secret
+   GEOKEO_API_KEY=your-geokeo-api-key
+   ```
 
 4. **Install dependencies**
    For frontend, you can use:
