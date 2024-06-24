@@ -6,7 +6,7 @@ import "./App.css";
 import CartPage from "./components/CartPage";
 import { CartProvider } from "./components/CartContext";
 import { GoogleOAuthProvider } from '@react-oauth/google';
-const clientId = '83290026728-svab89h76au9lsqn9vsuinr8bdsbdtsa.apps.googleusercontent.com';
+const clientId = process.env.CLIENTID || '';
 function App() {
   return (
     <GoogleOAuthProvider clientId={clientId}>    <CartProvider>
